@@ -33,9 +33,9 @@ function getRandomInt(max){
 }
 
 function playRound(playerChoice, computerChoice){
-    let tieMessage = "It's a tie!";
-    let playerWinMessage = "You win this round!";
-    let computerWinMessage = "You lost this round :(";
+    const tieMessage = "It's a tie!";
+    const playerWinMessage = `You win, ${playerChoice} beats ${computerChoice}`;
+    const computerWinMessage = `You lose, ${computerChoice} beats ${playerChoice}`;
     if (playerChoice == computerChoice) {
         playerScore++;
         computerScore++;
