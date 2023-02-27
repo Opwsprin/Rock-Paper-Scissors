@@ -1,10 +1,12 @@
-let playerScore = 0, computerScore = 0;
+let playerScore=0, computerScore=0;
 let result;
 
 const playerScoreText = document.getElementById("player_score");
 const computerScoreText = document.getElementById("computer_score");
 const fightResult = document.getElementById("fight_result");
-const buttons = document.querySelectorAll('button');
+const computerChoiceImage = document.getElementById("computer_choice");
+const resetButton = document.getElementById("reset_button");
+const buttons = document.querySelectorAll('.player_button');
 
 buttons.forEach((button) => {
     button.addEventListener('click', function(e){
@@ -15,6 +17,8 @@ buttons.forEach((button) => {
     });
 });
 
+resetButton.addEventListener('click', resetGame);
+
 function getPlayerChoice(buttonPressed){
     return buttonPressed.id;
 }
@@ -22,6 +26,7 @@ function getPlayerChoice(buttonPressed){
 function getComputerChoice(){
     let choiceArray = ["rock", "paper", "scissors"];
     let computerChoice = getRandomInt(3);
+    displayComputerChoice(choiceArray[computerChoice]);
     return choiceArray[computerChoice];
 }
 
@@ -110,11 +115,39 @@ function playRound(playerChoice, computerChoice){
     }
 
     function declareWinner(winner){
+        buttons.forEach((button)=>{
+            button.disabled=true;
+        });
         if (winner=="player"){
-            alert(`You win`);
+            fightResult.textContent="Congratulation! You won the fight!";
         }
         if (winner == "computer"){
-            alert(`You lose. Badly.`)
+            fightResult.textContent=`You lost the fight. Badly.`;
         }
     }
+}
+
+function displayComputerChoice(computerChoice){
+    computerChoiceImage.className = "icon";
+    if(computerChoice=="rock"){
+        computerChoiceImage.src="./images/rock_icon.png";
+    }
+    if(computerChoice=="paper"){
+        computerChoiceImage.src="./images/paper_icon.png";
+    }
+    if(computerChoice=="scissors"){
+        computerChoiceImage.src="./images/scissors_icon.png";
+    }
+}
+
+function resetGame(){
+    playerScore=0;
+    computerScore=0;
+    playerScoreText.textContent = playerScore;
+    computerScoreText.textContent = computerScore;
+    fightResult.textContent="Waiting for your choice";
+    computerChoiceImage.src="./images/robot.png";
+    buttons.forEach((button)=>{
+        button.disabled=false;
+    });
 }

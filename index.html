@@ -17,20 +17,29 @@
             <div class="player_column">
                 <div class="player_title">Your Choice:</div>
                 <div class="player_buttons_container">
-                    <button class="playerButton" id="paper">Paper</button>
-                    <button class="playerButton" id="rock">Rock</button>
-                    <button class="playerButton" id="scissors">Scissors</button>
+                    <button class="player_button">
+                        <img class ="icon" id="paper" src="./images/paper_icon.png">
+                    </button>
+                    <button class="player_button">
+                        <img class="icon" id="rock" src="./images/rock_icon.png">
+                    </button>
+                    <button class="player_button">
+                        <img class="icon" id="scissors" src="./images/scissors_icon.png">
+                    </button>
                 </div>
                 <div id="player_score">0</div>
             </div>
             <div class = "vs_div">
-                <img src="">
-                <div id="fight_result">Choose</div>
+                VS
+                <div id="fight_result"></div>
+                <div class="vs_div_footer">
+                    <button id="reset_button">Reset Game</button>
+                </div>
             </div>
             <div class="computer_column">
-                <div class="computerTitle">Enemy Choice:</div>
+                <div class="computer_title">Enemy Choice:</div>
                 <div class="computer_choice_container">
-                    <img id="computer_choice">
+                    <img class="icon" id="computer_choice" src="./images/robot.png">
                 </div>
                 <div id="computer_score">0</div>
             </div>
