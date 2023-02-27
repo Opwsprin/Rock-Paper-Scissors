@@ -3,6 +3,12 @@
     src: url(./font/Designer.otf);
 }
 
+@keyframes selected {
+    0%   {border-color:white;border-width:0;}
+    50%  {border-color:orange;border-width:6px;}
+    100% {border-color:white;border-width:0;}
+}
+
 body{
     background-color: white;
     margin:0;
@@ -39,12 +45,13 @@ body{
     justify-content: space-between;
     align-items: center;
     text-align:center;
+    box-shadow: -10px 10px 8px black;
 }
 
 .vs_div{
     justify-content: center;
     font-size:40px;
-    padding:8px;
+    padding:12px;
     min-width:240px;
     max-width:240px;
     display:flex;
@@ -87,4 +94,3 @@ body{
     padding:10px;
     border-radius:8px;
 }
-
