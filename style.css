@@ -1,0 +1,43 @@
+body{
+    background-color: bisque;
+    margin:0;
+    padding:0;
+}
+.container{    
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:36px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    gap:40px;
+}
+
+.game_columns{
+    height:720px;
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.player_column, .computer_column, .vs_div{
+    min-width:240px;
+    max-width:240px;
+    margin:12px;
+    border-style:solid;
+    border-color:black;
+    border-radius:8px;
+    padding:6px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#fight_result{
+    font-size:18px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}

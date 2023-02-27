@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="RPS.js" defer></script>
     <title>Rock, Paper, Scissors!</title>
 </head>
 <body>
-    <script src="RPS.js"></script>
-    
+    <div class="container">
+        <div class="header">
+            <div class="header_text">FIGHT!</div>
+        </div>
+        <div class="game_columns">
+            <div class="player_column">
+                <div class="player_title">Your Choice:</div>
+                <div class="player_buttons_container">
+                    <button class="playerButton" id="paper">Paper</button>
+                    <button class="playerButton" id="rock">Rock</button>
+                    <button class="playerButton" id="scissors">Scissors</button>
+                </div>
+                <div id="player_score">0</div>
+            </div>
+            <div class = "vs_div">
+                <img src="">
+                <div id="fight_result">Choose</div>
+            </div>
+            <div class="computer_column">
+                <div class="computerTitle">Enemy Choice:</div>
+                <div class="computer_choice_container">
+                    <img id="computer_choice">
+                </div>
+                <div id="computer_score">0</div>
+            </div>
+        </div>
+    </div>    
 </body>
 </html>
